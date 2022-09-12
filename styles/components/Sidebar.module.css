@@ -1,0 +1,28 @@
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 250px;
+  min-height: calc(100vh);
+  max-height: calc(100vh);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1030;
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+.sidebarLink {
+  color: #eee;
+  padding: 3px;
+}
+.sidebarLink:hover,
+.active {
+  color: #ddd;
+  font-weight: bold;
+}
+@media (min-width: 992px) {
+  .sidebar {
+    padding-top: 2px;
+  }
+  .sidebarLink {
+    padding: 10px;
+  }
+}
