@@ -10,11 +10,17 @@
   padding-top: 70px;
 }
 .sidebarLink {
-  color: #eee;
   padding: 3px;
+  font-size: large;
+  font-weight: 600;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
-.sidebarLink:hover,
-.active {
+.sidebarLink a {
+  color: #eee;
+}
+.sidebarLink a:hover,
+.sidebarLink a:focus,
+.sidebarLink a.active {
   color: #ddd;
   font-weight: bold;
 }

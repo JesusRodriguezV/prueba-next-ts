@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Collapse, Nav } from "react-bootstrap";
 import styles from "../styles/components/Sidebar.module.css";
 
@@ -9,11 +10,17 @@ const links = [
   { l: "Inicio", p: "/" },
   { l: "Cards", p: "/cards" },
   { l: "Charts", p: "/charts" },
+  { l: "Intl", p: "/intl" },
+  { l: "Intl.DateTimeFormat", p: "/date" },
+  { l: "Intl.NumberFormat", p: "/number" },
+  { l: "Intl.Collator", p: "/collator" },
 ].map(({ l, p }) => {
   return (
-    <Nav.Link className={styles.sidebarLink} href={p} key={l}>
-      {l}
-    </Nav.Link>
+    <Nav.Item className={styles.sidebarLink} key={l}>
+      <Link href={p} >
+        <a className="nav-link">{l}</a>
+      </Link>
+    </Nav.Item>
   );
 });
 

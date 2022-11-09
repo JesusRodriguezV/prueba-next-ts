@@ -34,13 +34,14 @@ const Dashboard = ({ children }: Props) => {
     <div className={styles.wrapper}>
       <Sidebar isOpen={isOpen}></Sidebar>
       <div
-        className={`${styles.contentWrapper} ${
-          isOpen ? styles.openSidebar : ""
-        }`}
+        className={`${styles.contentWrapper} ${isOpen ? styles.openSidebar : ""
+          }`}
       >
         <Navbar toggle={toggle}></Navbar>
         <Breadcrumb></Breadcrumb>
-        {children}
+        <div className="container">
+          {children}
+        </div>
       </div>
     </div>
   );
